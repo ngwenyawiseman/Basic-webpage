@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Webpage with SG</title>
+    <link rel="stylesheet" href="simple-grid.css">
+    <style>
+        body{
+            background-color: rgb(196, 182, 207);
+        }
+        .favorite-subjects{
+            background-color: rgb(226, 199, 199);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .col-6{
+            background-color: rgb(224, 201, 201);
+        }
+        .col-12{
+            background-color: lightblue;
+        }
+        .background-image {
+            background-image: url('istockphoto-184421942-612x612.jpg');
+            background-size: cover;
+            position: center;
+            width: 250px;
+            height: 150px;
+        }
+        @media screen and (max-width: 960px) {
+            .row {
+                display: block; 
+            }
+
+            .col-6 {
+                width: 100%; 
+            }
+        }
+
+      
+        @media screen and (min-width: 960px) {
+            .row {
+                display: flex; 
+
+            .col-6 {
+                width: 50%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1>Thulebona Ngwenya</h1>
+            </div>
+            <div class="col-6 background-image">
+                <img src="dawg.jpg" width="150" alt="background image">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <h1>Which City?</h1>
+                <h2>Dubai</h2>
+                <img class="col-10" src="images.jpeg" width="250">
+            </div>
+            <div class="col-6">
+                <p>Dubai entices visitors with its extravagant blend of modern marvels, cultural richness, and luxurious experiences. From iconic skyscrapers like the Burj Khalifa to world-class shopping destinations like the Dubai Mall, the city offers unparalleled architectural wonders and opulent leisure options. Its diverse culinary scene, vibrant nightlife, and pristine beaches cater to every taste and preference. Additionally, Dubai's commitment to innovation is evident in its ambitious projects, such as the Palm Jumeirah and futuristic transportation systems. Whether seeking adventure in the desert, indulgence in luxury resorts, or immersion in rich heritage, Dubai promises an unforgettable experience for travelers seeking the extraordinary.</p>
+            </div>
+        </div>
+
+        <section class="foreign language">
+            <h1>The Foreign Language</h1>
+            <h2>Arabic</h2>
+            <p>As a fan of documentaries and the Discovery Channel, I had always found it fascinating on the way of life in the Arabian nation. Here is a simple translation of some of the terms in Arabic.</p>
+        </section>
+        
+        <table class="col-12" border="1">
+            <tr>
+                <th border="1">English</th>
+                <th border="1">Arabic</th>
+            </tr>
+            <tr>
+                <td border="1">Money</td>
+                <td border="1">mənē</td>
+            </tr>
+            <tr>
+                <td border="1">Hello</td>
+                <td border="1">mrhban</td>
+            </tr>
+            <tr>
+                <td border="1">Nice to meet you</td>
+                <td border="1">saeid biliqayik</td>
+            </tr>
+        </table>
+
+        <div class="favorite-subjects">
+            <h2>Favourite Subjects in the Work Readiness Program</h2>
+            <div class="subject">
+                <h3>Engineering Business Systems</h3>
+                <img src="images/Engineering Business Systems.jpg" alt="EBS" width="150">
+                <p>Learning about the fundamentals of the business models and concepts and their applications.</p>
+            </div>
+            <div class="subject">
+                <h3>Fourth Industrial Revolution</h3>
+                <img src="images/4IR.jpeg" alt="4IR" width="150">
+                <p>This subject is characterized by the fusion of digital, biological, and physical technologies, disrupting traditional industries and fundamentally altering the way we live, work, and interact with one another.</p>
+            </div>
+            <div class="subject">
+                <h3>Full Stack Web Development</h3>
+                <img src="images/full-stack-web-developer.png" alt="FSW" width="150">
+                <p>In a nutshell, I am mastering front-end web development which is what you are currently seeing, also the backend which makes up what you're seeing.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <h2>The Historical Areas</h2>
+            <div class="col-6">
+                <h3>Mandela House Museum</h3>
+                <img src="images/MADELA-HOUSE-MUESUM-JETLIFE-VACATIONS.jpg" alt="Mandela's House" width="150">
+                <p>The Mandela House Museum in Johannesburg, South Africa, was once the residence of Nelson Mandela and
+                    his family. It now serves as a museum chronicling Mandela's life and the struggle against apartheid,
+                    preserving the history of the anti-apartheid movement and showcasing artifacts and memorabilia from
+                    Mandela's time there.</p>
+            </div>
+
+            <div class="col-6">
+                <h3>Walter Sisulu Shopping Center</h3>
+                <img src="images/walter-sisulu-square-of-dedication-322950.webp" alt="Walter Sisulu Mall" width="150">
+                <p>The Walter Sisulu Square of Dedication in Kliptown, Soweto, South Africa, commemorates the signing of
+                    the Freedom Charter in 1955. It includes the Walter Sisulu Square Shopping Centre, a modern shopping
+                    complex, offering a mix of retail stores, restaurants, and entertainment venues, while also honoring
+                    the historic significance of the site in the struggle for freedom and equality during the apartheid
+                    era.</p>
+            </div>
+
+            <div class="col-6">
+                <h3>Constitution Hill</h3>
+                <img src="images/constitution Hill.jpg" alt="Historical Area 3" width="150">
+                <p>Constitution Hill in Johannesburg, South Africa, is a historic site that once served as a notorious
+                    prison complex, housing political activists, including Nelson Mandela and Mah
+
+            </div>
+        </div>"
+        </div>
+    </div>        
+</body>
+</html>

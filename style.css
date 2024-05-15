@@ -1,0 +1,79 @@
+/* CSS for the Personal Webpage */
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: slategray;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        display: block;
+        background-color: lightblue;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .col-6 {
+        width: 100%;
+        float: none;
+        background-color: white;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .row {
+        display: flex;
+        background-color: lightblue;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .col-6 {
+        width: 50%;
+        background-color: white;
+        padding: 10px;
+    }
+}
+
+.background-image {
+    background-image: url('istockphoto-184421942-612x612.jpg');
+    background-size: cover;
+    position: center;
+    width: 250px;
+    height: 150px;
+}
+
+.favorite-subjects {
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.favorite-subjects .subject {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* CSS for the Layout Page */
+h1 {
+    color: lightblue;
+}
+
+a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: rgb(44, 44, 173);
+}
+
+a:hover {
+    color: rgb(2, 2, 37);
+}
