@@ -4,206 +4,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Webpage with SG</title>
+    <title>my-webpage-grid</title>
     <link rel="stylesheet" href="simple-grid.css">
     <style>
         body {
-            background-color: rgb(196, 182, 207);
+            background-color: gray;
+            color: brown;
         }
 
-        .favorite-subjects {
-            background-color: rgb(226, 199, 199);
+        .t1 {
+            background-color: rgb(124, 124, 44);
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        .t2 {
+            background-color: lightcyan;
         }
 
-        .col-6 {
-            background-color: rgb(224, 201, 201);
+        .background-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
         }
 
-        .col-12 {
-            background-color: lightblue;
-        }
-
-        .background-image {
+        .background-container::before {
             background-image: url('istockphoto-184421942-612x612.jpg');
             background-size: cover;
-            position: center;
-            width: 250px;
-            height: 150px;
-        }
-
-        .historical-places-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .historical-places-title {
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            text-align: center;
+            height: 100%;
+            z-index: -1;
         }
 
-        .historical-places {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        .background-container img {
+            position: relative;
             width: 100%;
+            height: 100%;
         }
 
-        .place {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin: 10px 0;
-        }
-
-        .place .text,
-        .place .image {
-            width: 100%;
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .place {
-                flex-direction: row;
-                width: 30%;
-                margin: 10px;
-            }
-
-            .place .text,
-            .place .image {
-                width: 50%;
-            }
-
-            .place .text {
-                padding: 10px;
+        @media (max-width: 960px) {
+            .mid-text {
+                float: right !important;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <h1>Thulebona Ngwenya</h1>
-            </div>
-            <div class="col-6 background-image">
-                <img src="dawg.jpg" width="150" alt="background image">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-6">
-                <h1>Which City?</h1>
-                <h2>Dubai</h2>
-                <img class="col-10" src="images.jpeg" width="250">
-            </div>
-            <div class="col-6">
-                <p>Dubai entices visitors with its extravagant blend of modern marvels, cultural richness, and luxurious
-                    experiences. From iconic skyscrapers like the Burj Khalifa to world-class shopping destinations like
-                    the Dubai Mall, the city offers unparalleled architectural wonders and opulent leisure options. Its
-                    diverse culinary scene, vibrant nightlife, and pristine beaches cater to every taste and preference.
-                    Additionally, Dubai's commitment to innovation is evident in its ambitious projects, such as the
-                    Palm Jumeirah and futuristic transportation systems. Whether seeking adventure in the desert,
-                    indulgence in luxury resorts, or immersion in rich heritage, Dubai promises an unforgettable
-                    experience for travelers seeking the extraordinary.</p>
-            </div>
-        </div>
-
-        <section class="foreign language">
-            <h1>The Foreign Language</h1>
-            <h2>Arabic</h2>
-            <p>As a fan of documentaries and the Discovery Channel, I had always found it fascinating on the way of life
-                in the Arabian nation. Here is a simple translation of some of the terms in Arabic.</p>
-        </section>
-
-        <table class="col-12" border="1">
-            <tr>
-                <th border="1">English</th>
-                <th border="1">Arabic</th>
-            </tr>
-            <tr>
-                <td border="1">Money</td>
-                <td border="1">mənē</td>
-            </tr>
-            <tr>
-                <td border="1">Hello</td>
-                <td border="1">mrhban</td>
-            </tr>
-            <tr>
-                <td border="1">Nice to meet you</td>
-                <td border="1">saeid biliqayik</td>
-            </tr>
-        </table>
-
-        <div class="favorite-subjects">
-            <h2>Favourite Subjects in the Work Readiness Program</h2>
-            <div class="subject">
-                <h3>Engineering Business Systems</h3>
-                <img src="images/Engineering Business Systems.jpg" alt="EBS" width="150">
-                <p>Learning about the fundamentals of the business models and concepts and their applications.</p>
-            </div>
-            <div class="subject">
-                <h3>Fourth Industrial Revolution</h3>
-                <img src="images/4IR.jpeg" alt="4IR" width="150">
-                <p>This subject is characterized by the fusion of digital, biological, and physical technologies,
-                    disrupting traditional industries and fundamentally altering the way we live, work, and interact
-                    with one another.</p>
-            </div>
-            <div class="subject">
-                <h3>Full Stack Web Development</h3>
-                <img src="images/full-stack-web-developer.png" alt="FSW" width="150">
-                <p>In a nutshell, I am mastering front-end web development which is what you are currently seeing, also
-                    the backend which makes up what you're seeing.</p>
-            </div>
-        </div>
-
-        <div class="historical-places-container">
-            <h2 class="historical-places-title">Historical Places</h2>
-            <div class="historical-places">
-                <div class="place">
-                    <div class="text">
-                        <h3>Mandela House Museum</h3>
-                        <p>The Mandela House Museum in Johannesburg, South Africa, was once the residence of Nelson
-                            Mandela
-                            and his family.</p>
-                    </div>
-                    <div class="image">
-                        <img src="images/MADELA-HOUSE-MUESUM-JETLIFE-VACATIONS.jpg" alt="Mandela's House">
-                    </div>
-                </div>
-
-                <div class="place">
-                    <div class="text">
-                        <h3>Walter Sisulu Shopping Center</h3>
-                        <p>The Walter Sisulu Square of Dedication in Kliptown, Soweto, South Africa, commemorates the
-                            signing of the Freedom Charter in 1955.</p>
-                    </div>
-                    <div class="image">
-                        <img src="images/walter-sisulu-square-of-dedication-322950.webp" alt="Walter Sisulu Mall">
-                    </div>
-                </div>
-
-                <div class="place">
-                    <div class="text">
-                        <h3>Constitution Hill</h3>
-                        <p>Constitution Hill in Johannesburg, South Africa, is a historic site that once served as a
-                            notorious prison complex, housing political activists, including Nelson Mandela and Mahatma
-                            Gandhi.</p>
-                    </div>
-                    <div class="image">
-                        <img src="images/constitution Hill.jpg" alt="Historical Area 3" width="750">
-                    </div>
-                </div>
+    <div class="row">
+        <h1 class="col-12" style="background-color: chocolate;">Thulebona Ngwenya🐊</h1>
+    </div>
+    <div class="row">
+        <div class="col-7"></div>
+        <div class="col-5">
+            <div class="background-container">
+                <img src="dawg.jpg" alt="Dawg">
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <h2 class="col-12" style="background-color: chocolate;">Which City?</h2>
+        <div class="col-4"><img src="images.jpeg" width="350"></div>
+        <p class="col-9">Dubai entices visitors with its extravagant blend of modern marvels, cultural richness, and
+            luxurious experiences. From iconic skyscrapers like the Burj Khalifa to world-class shopping destinations like
+            the Dubai Mall, the city offers unparalleled architectural wonders and opulent leisure options. Its
+            diverse culinary scene, vibrant nightlife, and pristine beaches cater to every taste and preference.
+            Additionally, Dubai's commitment to innovation is evident in its ambitious projects, such as the
+            Palm Jumeirah and futuristic transportation systems. Whether seeking adventure in the desert,
+            indulgence in luxury resorts, or immersion in rich heritage, Dubai promises an unforgettable
+            experience for travelers seeking the extraordinary.
+        </p>
+    </div>
+
+    <div class="row">
+        <h2 class="col-12" style="background-color: chocolate;">Foreign language</h2>
+        <p class="col-8">As a fan of documentaries and the Discovery Channel, I had always found it fascinating on the
+            way of life in the Arabian nation. Here is a simple translation of some of the terms in Arabic.</p>
+        <div class="col-12">
+            <table border="2">
+                <tr class="t1">
+                    <th>Arabic Phrase</th>
+                    <th>English translation</th>
+                </tr>
+
+                <tr class="t2">
+                    <th>mənē</th>
+                    <th>Money</th>
+                </tr>
+
+                <tr class="t2">
+                    <th>mrhban</th>
+                    <th>Hello</th>
+                </tr>
+
+                <tr class="t2">
+                    <th>saeid biliqayik</th>
+                    <th>Nice to meet you</th>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2 class="col-12" style="background-color: burlywood;">Favourite subjects in the Work Readiness Program</h2>
+
+        <div>
+            <div class="row">
+                <div class="col-4">
+                    <h3>Engineering Business Systems</h3>
+                    <div class="row">
+                        <img class="col-12-sm" src="images/Engineering Business Systems.jpg" width="150">
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <h3>Fourth Industrial technology bootcamp</h3>
+                    <div class="row">
+                        <img class="col-12-sm" src="images/4IR.jpeg" width="150">
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <h3>Full Stack Web development</h3>
+                    <div class="row">
+                        <img class="col-12-sm" src="images/full-stack-web-developer.png" width="150">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h2 class="col-12" style="background-color: chocolate;">Historical places</h2>
+            <div>
+                <div class="row">
+
+                    <div class="col-4">
+                        <h3>Mandela House Museum</h3>
+                        <div class="row">
+                            <p class="col-6-sm font-light" style="font-size: smaller;" style="text-align: justify;">The Mandela House Museum in Johannesburg, South Africa, was once the residence of Nelson Mandela and his family.</p>
+                            <img class="col-6-sm" src="images/MADELA-HOUSE-MUESUM-JETLIFE-VACATIONS.jpg">
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <h3>Walter Sisulu Square</h3>
+                        <div class="row">
+                            <p class="col-6-sm font-light mid-text" style="font-size: smaller;" style="text-align: justify;">The Walter Sisulu Square of Dedication in Kliptown, Soweto, South Africa, commemorates the signing of the Freedom Charter in 1955.</p>
+                            <img class="col-6-sm" src="images/walter-sisulu-square-of-dedication-322950.webp">
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <h3>Constitutional Hill</h3>
+                        <div class="row">
+                            <p class="col-6-sm font-light" style="font-size: smaller;" style="text-align: justify;">Constitution Hill in Johannesburg, South Africa, is a historic site that once served as a notorious prison complex, housing political activists, including Nelson Mandela and Mahatma Gandhi.</p>
+                            <img class="col-6-sm" src="images/constitution Hill.jpg">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
 </body>
+
+<footer>
+    <p><a href="index.html">Homepage</a></p>
+    <p>Copyrights reserved @Mtimande🐊 Consulting services</p>
+</footer>
 
 </html>

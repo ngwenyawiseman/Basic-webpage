@@ -1,125 +1,162 @@
-/* CSS for the Personal Webpage */
+/* BODY */
 body {
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-    background-color: slategray;
-}
-.historical-places-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.historical-places-title {
-    width: 100%;
-    text-align: center;
-}
-
-.historical-places {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.place {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 10px 0;
-}
-
-.place .text,
-.place .image {
-    width: 100%;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .place {
-        flex-direction: row;
-        width: 30%;
-        margin: 10px;
-    }
-
-    .place .text,
-    .place .image {
-        width: 50%;
-    }
-
-    .place .text {
-        padding: 10px;
-    }
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media screen and (max-width: 768px) {
-    .row {
-        display: block;
-        background-color: lightblue;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .col-6 {
-        width: 100%;
-        float: none;
-        background-color: white;
-        padding: 10px;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .row {
-        display: flex;
-        background-color: lightblue;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .col-6 {
-        width: 50%;
-        background-color: white;
-        padding: 10px;
-    }
-}
-
-.background-image {
+    background-color: lightgoldenrodyellow;
+  }
+  
+  /* Title class */
+  .background-container::before {
     background-image: url('istockphoto-184421942-612x612.jpg');
     background-size: cover;
-    position: center;
-    width: 250px;
-    height: 150px;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
-
-.favorite-subjects {
-    background-color: lightblue;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.favorite-subjects .subject {
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-
-/* CSS for the Layout Page */
-h1 {
-    color: lightblue;
-}
-
-a {
+  .city,
+  .forieng {
+    width: 95%;
+  }
+  
+  .t1 {
+    background-color: coral;
+  }
+  
+  .t2 {
+    background-color: lightskyblue;
+  }
+  
+  /* Subject class */
+  .subject {
+    margin: 1em;
+    padding: 1em;
+    width: 95%;
+  }
+  
+  .ebs,
+  .fswd,
+  .tbc {
+    flex: 1;
+  }
+  
+  
+  /* Media Queries */
+  @media (min-width: 960px) {
+    .subject,
+    .lring {
+      display: flex;
+    }
+  
+  
+    /* Historical Query */
+    .history {
+      display: flex;
+      width: 100%;
+      gap: 20px;
+  }
+  
+  .historyig{
+    width: 200px;
+    align-self: self-start;
+    padding-top:  2em;
+  }
+  
+    .column {
+      display: flex;
+      gap: 10px;
+      margin-inline-start: auto;
+    }
+  
+  
+  
+    /* Title Query */
+    .lring {
+      justify-self: flex-end;
+      grid-template-areas: '2/2';
+      padding-left: 50%;
+    }
+  }
+  
+  
+  @media (max-width: 960px){
+    body{
+      width: 90%;
+    }
+    /* History class */
+  .history {
     display: block;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: rgb(44, 44, 173);
-}
+    width: 90%;
+  }
+  
+  .column {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .historyig{
+    width: 200px;
+    align-self: self-start;
+    padding-top:  2em;
+  }
+  .mid{
+    order: 1;
+  }
+  }
+  
+  
+  * {
+    font-family: 'Lato', Helvetica, sans-serif;
+    color: #333447;
+    line-height: 1.5;
+    font-size: medium;
+  }
+  
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  h4 {
+    font-size: 1.125rem;
+  }
+  
+  h5 {
+    font-size: 1rem;
+  }
+  
+  h6 {
+    font-size: 0.875rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+    font-weight: 200;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+  .font-light {
+    font-weight: 300;
+  }
+  
+  .font-regular {
+    font-weight: 400;
+  }
+  
+  .font-heavy {
+    font-weight: 700;
+  }
+
 
 a:hover {
     color: rgb(2, 2, 37);
